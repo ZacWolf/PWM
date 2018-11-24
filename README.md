@@ -1,11 +1,26 @@
 # PWM.h
 
-v 5.0
+v 5.0.1
 
 Created by Sam Knight
+Fork by Zac Morris (@ZacWolf) zac@zacwolf.com
 
 Modify PWM frequency on AVR (arduino) platform
 
+Modified by Zac Morris 11/24/2018:
+  1) Modified BTimerDefs.cpp to add an IF/THEN the 
+  #define UINT16_MAX 65535
+  #define UINT8_MAX 255
+
+  Since those are now defined in the stdlib, and were  throwing warning messages during compile.
+
+  Changed to:
+  #ifndef UINT16_MAX
+  #define UINT16_MAX 65535
+  #endif
+  #ifndef UINT8_MAX
+  #define UINT8_MAX 255
+  #endif
 
 
 Modified by Terry Myers:
